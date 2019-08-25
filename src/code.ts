@@ -1,3 +1,5 @@
+import faker from './lib/faker.js'
+
 figma.showUI(__html__)
 
 figma.ui.onmessage = msg => {
