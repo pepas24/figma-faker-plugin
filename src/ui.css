@@ -1,0 +1,21 @@
+.visual-bell {
+    height: auto;
+    min-height: 36px;
+    position: absolute;
+    bottom: 8px;
+    width: 94%;
+    padding: 8px 16px;
+}
+
+.visual-bell__msg {
+    line-height: 1.4;
+}
+
+.hidde {
+    display: none;
+}
+
+#run {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
