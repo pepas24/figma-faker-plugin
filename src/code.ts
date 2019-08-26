@@ -1,11 +1,14 @@
-import faker from './lib/faker.js'
+import faker from './lib/faker'
 
 figma.showUI(__html__)
 
 figma.ui.onmessage = msg => {
   if ( msg.type === 'run' ) {
-    console.log('Plugin works!')
+
+    faker.locale = msg.fakerLocation
+    console.log(faker.name.findName())
+
   }
 
-  figma.closePlugin()
+  // figma.closePlugin()
 }
