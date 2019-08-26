@@ -2,6 +2,7 @@ import './lib/figma-plugin-ds.min.css'
 import './lib/figma-plugin-ds.min.js'
 import './ui.css'
 
+// Init selection menu for ui
 selectMenu.init();
 
 document.getElementById('run').onclick = () => {
