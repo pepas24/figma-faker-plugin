@@ -31,12 +31,17 @@ const runCommand = (msg) => {
 
       if ( layersAllowed.find( layerType => layerType === layer.type ) ) {
 
-        if ( layer.type === 'TEXT' && layer.name[0] === '$' ) {
-          setFakeData(layer)
+        if ( layer.type === 'TEXT' ) {
+          if (layer.name[0] === '$') {
+            setFakeData(layer)
+          }
+          return;
         } else {
           const textLayers = layer.findAll( node => (node.type === 'TEXT'))
           textLayers.map(textLayer => {
-            setFakeData(textLayer)
+            if (textLayer.name[0] === '$') {
+              setFakeData(textLayer)
+            }
           })
         }
 
